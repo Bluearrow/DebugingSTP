@@ -2,3 +2,5 @@
 #-*- coding: utf-8 -*-
 
 print("hello world!")
+
+print("test diff function vs2013")
