@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="draw_data.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="STPDebugging.py" />
     <Compile Include="test.py">
       <SubType>Code</SubType>
