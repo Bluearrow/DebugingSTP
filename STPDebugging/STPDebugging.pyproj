@@ -5,7 +5,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>758d8646-0016-4278-b2a8-dd3456331ff3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>STPDebugging.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,10 +26,15 @@
     <Compile Include="draw_data.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="STPDebugging.py" />
     <Compile Include="test.py">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HISTORY.rst">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
