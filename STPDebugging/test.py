@@ -3,4 +3,4 @@
 
 print("hello world!")
 
-print("test diff function vs2013")
+print("test diff function in IDE")
