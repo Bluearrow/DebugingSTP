@@ -2,24 +2,15 @@
 #-*- coding: utf-8 -*-
 
 import matplotlib.pyplot as plt
-import numpy as np
-import string
-import msvcrt
-from matplotlib.patches import FancyArrowPatch
-#from mpl_toolkit.mplot2d import proj3d
-
-filename = 'D:\Project\VS\STP\STP_Framework\log_robot_infor.txt'
-
-class Arrow2D(FancyArrowPatch):
-    def __init__(self, xs, ys, *args, **kwargs):
-        FancyArrowPatch.__init__(self, (0,0), (0,0), *args, **kwargs)
-        self._verts2d = xs, ys
-
-    def draw(self, renderer):
-        xs2d, ys2d = self._verts2d
 
 
-def show2dfromfile(filename=filename):
+def show_2D_from_file(filename=filename):
+    """ Draw the position and speed (if has) with data in file
+    on a chart to give a visual observation of the motion
+    trail.
+
+    :param filename: Filename containing data like: x y speed_x speed_y.
+    """
 
     with open(filename, 'r') as f:
         lines = f.read()
@@ -33,12 +24,12 @@ def show2dfromfile(filename=filename):
         n = [data[3] for data in datas]
 
     for i in range(len(x)):
-        if length == 2:      
+        if length == 2:      # Only position
             delta_x = 50
             delta_y = 50.0 * (i*5 + 50) / len(x)
             #delta_x = float(x[(i+1)%len(x)])
             #delta_y = float(y[(i+1)%len(x)])
-        elif length == 4:
+        elif length == 4:   # Position and speed
             delta_x = 50 * float(m[i])
             delta_y = 50 * float(n[i])
         plt.arrow(float(x[i]),float(y[i]), delta_x, delta_y, \
@@ -55,4 +46,5 @@ def show2dfromfile(filename=filename):
     plt.show()
 
 if __name__ == '__main__':
-    show2dfromfile(filename)
+    filename = 'D:\Project\VS\STP\STP_Framework\log_robot_infor.txt'
+    show_2D_from_file(filename)
