@@ -3,4 +3,8 @@ STPDebugging: A mudole to develop STP Framework meanwhile save some useful pytho
 
 Some auxiliary code used to debug and develop STP Framework.
 
-Related modules: pyserial, socket, matplotlib, 
+Learning basic knowledge of python3 with test code in python_basis.
+
+Related modules: pyserial, socket, matplotlib.
+
+
